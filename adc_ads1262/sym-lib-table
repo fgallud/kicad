@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name adc_ads1262-rescue)(type Legacy)(uri ${KIPRJMOD}/adc_ads1262-rescue.lib)(options "")(descr ""))
+  (lib (name tivac)(type Legacy)(uri /home/paco/kicad/tivac_power_JCA0224D01/tivac.lib)(options "")(descr ""))
+)

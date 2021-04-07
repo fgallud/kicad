@@ -1,0 +1,723 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 3350 750  0    60   ~ 0
+Conversor ADC basado en el chip ADS1262 de texas instruments\nrango 0-5v, 10 canales, referencia interna, 1Gohm, amplificador programable  interno
+$Comp
+L adc_ads1262-rescue:ADS1262 U1
+U 1 1 5AB25B51
+P 5500 3750
+F 0 "U1" H 4150 4700 60  0000 C CNN
+F 1 "ADS1262" H 4250 2650 60  0000 C CNN
+F 2 "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm" H 4800 4250 60  0001 C CNN
+F 3 "" H 4800 4250 60  0001 C CNN
+	1    5500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5AB25C49
+P 5150 5000
+F 0 "#PWR01" H 5150 4750 50  0001 C CNN
+F 1 "GND" H 5150 4850 50  0000 C CNN
+F 2 "" H 5150 5000 50  0001 C CNN
+F 3 "" H 5150 5000 50  0001 C CNN
+	1    5150 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5AB25C6F
+P 5300 5000
+F 0 "#PWR02" H 5300 4750 50  0001 C CNN
+F 1 "GND" H 5300 4850 50  0000 C CNN
+F 2 "" H 5300 5000 50  0001 C CNN
+F 3 "" H 5300 5000 50  0001 C CNN
+	1    5300 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5AB25C81
+P 5150 2650
+F 0 "#PWR03" H 5150 2500 50  0001 C CNN
+F 1 "+5V" H 5150 2790 50  0000 C CNN
+F 2 "" H 5150 2650 50  0001 C CNN
+F 3 "" H 5150 2650 50  0001 C CNN
+	1    5150 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5AB25CD0
+P 4800 1750
+F 0 "#PWR04" H 4800 1500 50  0001 C CNN
+F 1 "GND" H 4800 1600 50  0000 C CNN
+F 2 "" H 4800 1750 50  0001 C CNN
+F 3 "" H 4800 1750 50  0001 C CNN
+	1    4800 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 5AB25D09
+P 4800 1350
+F 0 "#PWR05" H 4800 1200 50  0001 C CNN
+F 1 "+5V" H 4800 1490 50  0000 C CNN
+F 2 "" H 4800 1350 50  0001 C CNN
+F 3 "" H 4800 1350 50  0001 C CNN
+	1    4800 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L adc_ads1262-rescue:C C2
+U 1 1 5AB25D1A
+P 4800 1550
+F 0 "C2" H 4825 1650 50  0000 L CNN
+F 1 "100nF" H 4825 1450 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4838 1400 50  0001 C CNN
+F 3 "" H 4800 1550 50  0001 C CNN
+	1    4800 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L adc_ads1262-rescue:C C3
+U 1 1 5AB25D5D
+P 5100 1550
+F 0 "C3" H 5125 1650 50  0000 L CNN
+F 1 "100nF" H 5125 1450 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5138 1400 50  0001 C CNN
+F 3 "" H 5100 1550 50  0001 C CNN
+	1    5100 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L adc_ads1262-rescue:CP C1
+U 1 1 5AB25D7D
+P 3900 1550
+F 0 "C1" H 3925 1650 50  0000 L CNN
+F 1 "10uF" H 3925 1450 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C_Pad2.25x2.35mm_HandSolder" H 3938 1400 50  0001 C CNN
+F 3 "" H 3900 1550 50  0001 C CNN
+	1    3900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR06
+U 1 1 5AB25DE6
+P 3900 1350
+F 0 "#PWR06" H 3900 1200 50  0001 C CNN
+F 1 "+5V" H 3900 1490 50  0000 C CNN
+F 2 "" H 3900 1350 50  0001 C CNN
+F 3 "" H 3900 1350 50  0001 C CNN
+	1    3900 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5AB25DFD
+P 3900 1750
+F 0 "#PWR07" H 3900 1500 50  0001 C CNN
+F 1 "GND" H 3900 1600 50  0000 C CNN
+F 2 "" H 3900 1750 50  0001 C CNN
+F 3 "" H 3900 1750 50  0001 C CNN
+	1    3900 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5AB25E2A
+P 5100 1750
+F 0 "#PWR08" H 5100 1500 50  0001 C CNN
+F 1 "GND" H 5100 1600 50  0000 C CNN
+F 2 "" H 5100 1750 50  0001 C CNN
+F 3 "" H 5100 1750 50  0001 C CNN
+	1    5100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R6
+U 1 1 5AB260A6
+P 2900 2950
+F 0 "R6" V 2980 2950 50  0000 C CNN
+F 1 "10k" V 2900 2950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 2950 50  0001 C CNN
+F 3 "" H 2900 2950 50  0001 C CNN
+	1    2900 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R1
+U 1 1 5AB26120
+P 2650 3050
+F 0 "R1" V 2730 3050 50  0000 C CNN
+F 1 "10k" V 2650 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2580 3050 50  0001 C CNN
+F 3 "" H 2650 3050 50  0001 C CNN
+	1    2650 3050
+	0    -1   -1   0   
+$EndComp
+Text Notes 1950 2700 0    60   ~ 0
+Limita corriente a 10mA si excede 5v (hasta 100V)
+$Comp
+L adc_ads1262-rescue:C C4
+U 1 1 5AB26D2F
+P 6750 4400
+F 0 "C4" H 6775 4500 50  0000 L CNN
+F 1 "4.7nF" H 6775 4300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6788 4250 50  0001 C CNN
+F 3 "" H 6750 4400 50  0001 C CNN
+	1    6750 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:CP C5
+U 1 1 5AB26FD6
+P 7000 4750
+F 0 "C5" H 7025 4850 50  0000 L CNN
+F 1 "1uF" H 7025 4650 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C_Pad2.25x2.35mm_HandSolder" H 7038 4600 50  0001 C CNN
+F 3 "" H 7000 4750 50  0001 C CNN
+	1    7000 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5AB270E0
+P 7000 4900
+F 0 "#PWR09" H 7000 4650 50  0001 C CNN
+F 1 "GND" H 7000 4750 50  0000 C CNN
+F 2 "" H 7000 4900 50  0001 C CNN
+F 3 "" H 7000 4900 50  0001 C CNN
+	1    7000 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R13
+U 1 1 5AB2722E
+P 7000 2950
+F 0 "R13" V 7080 2950 50  0000 C CNN
+F 1 "47" V 7000 2950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 2950 50  0001 C CNN
+F 3 "" H 7000 2950 50  0001 C CNN
+	1    7000 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R7
+U 1 1 5AB27599
+P 2900 3150
+F 0 "R7" V 2980 3150 50  0000 C CNN
+F 1 "10k" V 2900 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 3150 50  0001 C CNN
+F 3 "" H 2900 3150 50  0001 C CNN
+	1    2900 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R2
+U 1 1 5AB275D1
+P 2650 3250
+F 0 "R2" V 2730 3250 50  0000 C CNN
+F 1 "10k" V 2650 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2580 3250 50  0001 C CNN
+F 3 "" H 2650 3250 50  0001 C CNN
+	1    2650 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R8
+U 1 1 5AB27614
+P 2900 3350
+F 0 "R8" V 2980 3350 50  0000 C CNN
+F 1 "10k" V 2900 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 3350 50  0001 C CNN
+F 3 "" H 2900 3350 50  0001 C CNN
+	1    2900 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R9
+U 1 1 5AB27652
+P 2900 3550
+F 0 "R9" V 2980 3550 50  0000 C CNN
+F 1 "10k" V 2900 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 3550 50  0001 C CNN
+F 3 "" H 2900 3550 50  0001 C CNN
+	1    2900 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R10
+U 1 1 5AB27695
+P 2900 3750
+F 0 "R10" V 2980 3750 50  0000 C CNN
+F 1 "10k" V 2900 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 3750 50  0001 C CNN
+F 3 "" H 2900 3750 50  0001 C CNN
+	1    2900 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R5
+U 1 1 5AB276DB
+P 2650 3850
+F 0 "R5" V 2730 3850 50  0000 C CNN
+F 1 "10k" V 2650 3850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2580 3850 50  0001 C CNN
+F 3 "" H 2650 3850 50  0001 C CNN
+	1    2650 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R4
+U 1 1 5AB27734
+P 2650 3650
+F 0 "R4" V 2730 3650 50  0000 C CNN
+F 1 "10k" V 2650 3650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2580 3650 50  0001 C CNN
+F 3 "" H 2650 3650 50  0001 C CNN
+	1    2650 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R3
+U 1 1 5AB2778C
+P 2650 3450
+F 0 "R3" V 2730 3450 50  0000 C CNN
+F 1 "10k" V 2650 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2580 3450 50  0001 C CNN
+F 3 "" H 2650 3450 50  0001 C CNN
+	1    2650 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R15
+U 1 1 5AB27853
+P 7000 3150
+F 0 "R15" V 7080 3150 50  0000 C CNN
+F 1 "47" V 7000 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 3150 50  0001 C CNN
+F 3 "" H 7000 3150 50  0001 C CNN
+	1    7000 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R18
+U 1 1 5AB278A1
+P 7000 3450
+F 0 "R18" V 7080 3450 50  0000 C CNN
+F 1 "47" V 7000 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 3450 50  0001 C CNN
+F 3 "" H 7000 3450 50  0001 C CNN
+	1    7000 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R16
+U 1 1 5AB278F6
+P 7000 3250
+F 0 "R16" V 7080 3250 50  0000 C CNN
+F 1 "47" V 7000 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 3250 50  0001 C CNN
+F 3 "" H 7000 3250 50  0001 C CNN
+	1    7000 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R19
+U 1 1 5AB2795C
+P 7000 3550
+F 0 "R19" V 7080 3550 50  0000 C CNN
+F 1 "47" V 7000 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 3550 50  0001 C CNN
+F 3 "" H 7000 3550 50  0001 C CNN
+	1    7000 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R17
+U 1 1 5AB279B7
+P 7000 3350
+F 0 "R17" V 7080 3350 50  0000 C CNN
+F 1 "47" V 7000 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 3350 50  0001 C CNN
+F 3 "" H 7000 3350 50  0001 C CNN
+	1    7000 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R12
+U 1 1 5AB27A0D
+P 6600 2700
+F 0 "R12" V 6680 2700 50  0000 C CNN
+F 1 "10k" V 6600 2700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6530 2700 50  0001 C CNN
+F 3 "" H 6600 2700 50  0001 C CNN
+	1    6600 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L adc_ads1262-rescue:CP C6
+U 1 1 5AB281AD
+P 3450 1500
+F 0 "C6" H 3475 1600 50  0000 L CNN
+F 1 "10uF" H 3475 1400 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C_Pad2.25x2.35mm_HandSolder" H 3488 1350 50  0001 C CNN
+F 3 "" H 3450 1500 50  0001 C CNN
+	1    3450 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5AB28277
+P 3450 1650
+F 0 "#PWR010" H 3450 1400 50  0001 C CNN
+F 1 "GND" H 3450 1500 50  0000 C CNN
+F 2 "" H 3450 1650 50  0001 C CNN
+F 3 "" H 3450 1650 50  0001 C CNN
+	1    3450 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR011
+U 1 1 5AB282B4
+P 3450 1350
+F 0 "#PWR011" H 3450 1200 50  0001 C CNN
+F 1 "+3.3V" H 3450 1490 50  0000 C CNN
+F 2 "" H 3450 1350 50  0001 C CNN
+F 3 "" H 3450 1350 50  0001 C CNN
+	1    3450 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR012
+U 1 1 5AB28514
+P 6600 2550
+F 0 "#PWR012" H 6600 2400 50  0001 C CNN
+F 1 "+3.3V" H 6600 2690 50  0000 C CNN
+F 2 "" H 6600 2550 50  0001 C CNN
+F 3 "" H 6600 2550 50  0001 C CNN
+	1    6600 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR013
+U 1 1 5AB2859A
+P 5300 2650
+F 0 "#PWR013" H 5300 2500 50  0001 C CNN
+F 1 "+3.3V" H 5300 2790 50  0000 C CNN
+F 2 "" H 5300 2650 50  0001 C CNN
+F 3 "" H 5300 2650 50  0001 C CNN
+	1    5300 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR014
+U 1 1 5AB28666
+P 5100 1350
+F 0 "#PWR014" H 5100 1200 50  0001 C CNN
+F 1 "+3.3V" H 5100 1490 50  0000 C CNN
+F 2 "" H 5100 1350 50  0001 C CNN
+F 3 "" H 5100 1350 50  0001 C CNN
+	1    5100 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5AB28B9A
+P 6450 4150
+F 0 "#PWR015" H 6450 3900 50  0001 C CNN
+F 1 "GND" H 6450 4000 50  0000 C CNN
+F 2 "" H 6450 4150 50  0001 C CNN
+F 3 "" H 6450 4150 50  0001 C CNN
+	1    6450 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L adc_ads1262-rescue:CP C7
+U 1 1 5AB28C26
+P 6600 4850
+F 0 "C7" H 6625 4950 50  0000 L CNN
+F 1 "1uF" H 6625 4750 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C_Pad2.25x2.35mm_HandSolder" H 6638 4700 50  0001 C CNN
+F 3 "" H 6600 4850 50  0001 C CNN
+	1    6600 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5AB28C99
+P 6600 5000
+F 0 "#PWR016" H 6600 4750 50  0001 C CNN
+F 1 "GND" H 6600 4850 50  0000 C CNN
+F 2 "" H 6600 5000 50  0001 C CNN
+F 3 "" H 6600 5000 50  0001 C CNN
+	1    6600 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L adc_ads1262-rescue:R R11
+U 1 1 5AB2918A
+P 2900 3950
+F 0 "R11" V 2980 3950 50  0000 C CNN
+F 1 "10k" V 2900 3950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 3950 50  0001 C CNN
+F 3 "" H 2900 3950 50  0001 C CNN
+	1    2900 3950
+	0    -1   -1   0   
+$EndComp
+Text Label 1850 2950 0    60   ~ 0
+AIN0
+Text Label 1850 3050 0    60   ~ 0
+AIN1
+Text Label 1850 3150 0    60   ~ 0
+AIN2
+Text Label 1850 3250 0    60   ~ 0
+AIN3
+Text Label 1850 3350 0    60   ~ 0
+AIN4
+Text Label 1850 3450 0    60   ~ 0
+AIN5
+Text Label 1850 3550 0    60   ~ 0
+AIN6
+Text Label 1850 3650 0    60   ~ 0
+AIN7
+Text Label 1850 3750 0    60   ~ 0
+AIN8
+Text Label 1850 3850 0    60   ~ 0
+AIN9
+Text Label 1850 3950 0    60   ~ 0
+AIN_GND
+$Comp
+L adc_ads1262-rescue:R R14
+U 1 1 5AB2A07A
+P 7000 3050
+F 0 "R14" V 7080 3050 50  0000 C CNN
+F 1 "47" V 7000 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 3050 50  0001 C CNN
+F 3 "" H 7000 3050 50  0001 C CNN
+	1    7000 3050
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 6400 4000
+Text Label 7450 3350 0    60   ~ 0
+DOUT
+Text Label 7450 3550 0    60   ~ 0
+DRDY
+Wire Wire Line
+	3900 1350 3900 1400
+Wire Wire Line
+	3900 1700 3900 1750
+Wire Wire Line
+	4800 1700 4800 1750
+Wire Wire Line
+	5100 1700 5100 1750
+Wire Wire Line
+	5100 1350 5100 1400
+Wire Wire Line
+	4800 1350 4800 1400
+Wire Wire Line
+	3050 2950 3900 2950
+Wire Wire Line
+	3900 3050 2800 3050
+Wire Wire Line
+	3900 3150 3050 3150
+Wire Wire Line
+	2800 3250 3900 3250
+Wire Wire Line
+	3900 3350 3050 3350
+Wire Wire Line
+	2800 3450 3900 3450
+Wire Wire Line
+	3900 3550 3050 3550
+Wire Wire Line
+	2800 3650 3900 3650
+Wire Wire Line
+	3900 3750 3050 3750
+Wire Wire Line
+	2800 3850 3900 3850
+Wire Wire Line
+	6450 4400 6600 4400
+Wire Wire Line
+	6450 4500 6900 4500
+Wire Wire Line
+	6900 4500 6900 4400
+Wire Wire Line
+	6450 4600 7000 4600
+Wire Wire Line
+	6400 3050 6600 3050
+Wire Wire Line
+	6600 3050 6600 2850
+Wire Wire Line
+	6400 2950 6850 2950
+Wire Wire Line
+	6400 3150 6850 3150
+Wire Wire Line
+	6850 3250 6400 3250
+Wire Wire Line
+	6400 3350 6850 3350
+Wire Wire Line
+	6850 3450 6400 3450
+Wire Wire Line
+	6400 3550 6850 3550
+Wire Wire Line
+	6400 4100 6450 4100
+Wire Wire Line
+	6450 4100 6450 4150
+Wire Wire Line
+	6450 4700 6600 4700
+Wire Wire Line
+	3050 3950 3900 3950
+Wire Wire Line
+	1650 2950 2750 2950
+Wire Wire Line
+	2500 3050 1650 3050
+Wire Wire Line
+	1650 3150 2750 3150
+Wire Wire Line
+	2500 3250 1650 3250
+Wire Wire Line
+	1650 3350 2750 3350
+Wire Wire Line
+	2750 3550 1650 3550
+Wire Wire Line
+	2750 3750 1650 3750
+Wire Wire Line
+	1650 3850 2500 3850
+Wire Wire Line
+	2750 3950 1650 3950
+Connection ~ 6600 3050
+Wire Wire Line
+	1650 3450 2500 3450
+Wire Wire Line
+	1650 3650 2500 3650
+Wire Wire Line
+	7150 3350 8150 3350
+Text Label 7900 2950 0    60   ~ 0
+START
+Text Label 7900 3250 0    60   ~ 0
+DIN
+Text Label 7900 3450 0    60   ~ 0
+SCLK
+Text Label 7900 3150 0    60   ~ 0
+CS
+Text Label 7900 3050 0    60   ~ 0
+RESET
+Wire Wire Line
+	6600 3050 6850 3050
+$Comp
+L Connector_Generic:Conn_01x03 JPOWER1
+U 1 1 606BC5F1
+P 2300 1350
+F 0 "JPOWER1" H 2218 1667 50  0000 C CNN
+F 1 "Conn_01x03" H 2218 1576 50  0000 C CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x03_P5.00mm_45-Degree" H 2300 1350 50  0001 C CNN
+F 3 "~" H 2300 1350 50  0001 C CNN
+	1    2300 1350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 606C05CE
+P 2850 1350
+F 0 "#PWR0101" H 2850 1200 50  0001 C CNN
+F 1 "+3.3V" H 2850 1490 50  0000 C CNN
+F 2 "" H 2850 1350 50  0001 C CNN
+F 3 "" H 2850 1350 50  0001 C CNN
+	1    2850 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 606C0BAF
+P 2850 1200
+F 0 "#PWR0102" H 2850 1050 50  0001 C CNN
+F 1 "+5V" H 2850 1340 50  0000 C CNN
+F 2 "" H 2850 1200 50  0001 C CNN
+F 3 "" H 2850 1200 50  0001 C CNN
+	1    2850 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 606C1231
+P 2850 1500
+F 0 "#PWR0103" H 2850 1250 50  0001 C CNN
+F 1 "GND" H 2850 1350 50  0000 C CNN
+F 2 "" H 2850 1500 50  0001 C CNN
+F 3 "" H 2850 1500 50  0001 C CNN
+	1    2850 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 1250 2850 1250
+Wire Wire Line
+	2850 1250 2850 1200
+Wire Wire Line
+	2500 1350 2850 1350
+Wire Wire Line
+	2500 1450 2850 1450
+Wire Wire Line
+	2850 1450 2850 1500
+$Comp
+L Connector_Generic:Conn_01x11 JANALOG1
+U 1 1 606DF66F
+P 1450 3450
+F 0 "JANALOG1" H 1368 4167 50  0000 C CNN
+F 1 "Conn_01x11" H 1368 4076 50  0000 C CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x11_P5.00mm_45-Degree" H 1450 3450 50  0001 C CNN
+F 3 "~" H 1450 3450 50  0001 C CNN
+	1    1450 3450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x07 JDIGITAL1
+U 1 1 606E3677
+P 8650 3250
+F 0 "JDIGITAL1" H 8730 3292 50  0000 L CNN
+F 1 "Conn_01x07" H 8730 3201 50  0000 L CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x07_P5.00mm_45-Degree" H 8650 3250 50  0001 C CNN
+F 3 "~" H 8650 3250 50  0001 C CNN
+	1    8650 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 2950 8450 2950
+Wire Wire Line
+	7150 3050 8450 3050
+Wire Wire Line
+	7150 3150 8450 3150
+Wire Wire Line
+	7150 3250 8450 3250
+Wire Wire Line
+	8250 3450 8250 3350
+Wire Wire Line
+	8250 3350 8450 3350
+Wire Wire Line
+	7150 3450 8250 3450
+Wire Wire Line
+	8300 3550 8300 3450
+Wire Wire Line
+	8300 3450 8450 3450
+Wire Wire Line
+	7150 3550 8300 3550
+Wire Wire Line
+	8150 3350 8150 3650
+Wire Wire Line
+	8150 3650 8450 3650
+Wire Wire Line
+	8450 3650 8450 3550
+$EndSCHEMATC

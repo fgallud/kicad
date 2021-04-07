@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name tiva_adc_ads1262)(type Legacy)(uri /home/paco/kicad/tiva_adc_ads1262/TIVA_ADC_ADS1262.lib)(options "")(descr ""))
+)

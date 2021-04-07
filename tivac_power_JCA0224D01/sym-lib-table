@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name tiva_c)(type Legacy)(uri /home/paco/kicad/tivac_power_JCA0224D01/tivac.lib)(options "")(descr ""))
+)
